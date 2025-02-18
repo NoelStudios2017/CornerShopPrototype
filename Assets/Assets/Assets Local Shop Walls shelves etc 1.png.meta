@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 89f9a9a71e0f02d4ba2f9804e01b206e
+guid: b74e10109cd822943bee18cb6f130277
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4355620854056639347
-    second: Assets Local Shop Walls shelves etc_0
+      213: -6868025601905349680
+    second: Assets Local Shop Walls shelves etc 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -47,7 +47,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Assets Local Shop Walls shelves etc_0
+      name: Assets Local Shop Walls shelves etc 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,14 +141,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d84aba909e9bd83c0800000000000000
-      internalID: -4355620854056639347
+      spriteID: 0dba42a7a1fdfa0a0800000000000000
+      internalID: -6868025601905349680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets Local Shop Walls shelves etc_1
+      name: Assets Local Shop Walls shelves etc 1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40f05c511063d964e854c36c1f1b238e
-      internalID: -1170105918
+      spriteID: 2cf203e1ed80c374cac39c1b9cc8e4b4
+      internalID: 570042481
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets Local Shop Walls shelves etc_2
+      name: Assets Local Shop Walls shelves etc 1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -178,15 +178,59 @@ TextureImporter:
         width: 64
         height: 20
       alignment: 9
-      pivot: {x: 0.5974586, y: 0.936615}
+      pivot: {x: 0.6399529, y: 0.93955535}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da38577e1e75ecb49be305375fd56178
-      internalID: 1771332616
+      spriteID: ce1af69883835814883aab8cf300fcd9
+      internalID: -419003789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets Local Shop Walls shelves etc 1_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 336
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48301c9ef368d05449abf96c9a3b8cf9
+      internalID: 738738294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets Local Shop Walls shelves etc 1_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 336
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bf62945f49c7448961f63d44d51d83
+      internalID: 1372715961
       vertices: []
       indices: 
       edges: []
@@ -195,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fe4b65afd353c5241b2a4f09a1f9e8f4
+    spriteID: 16fb621f7e97a0f42ad1ddab162510e4
     internalID: 0
     vertices: []
     indices: 
@@ -205,9 +249,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Assets Local Shop Walls shelves etc_0: -4355620854056639347
-      Assets Local Shop Walls shelves etc_1: -1170105918
-      Assets Local Shop Walls shelves etc_2: 1771332616
+      Assets Local Shop Walls shelves etc 1_0: -6868025601905349680
+      Assets Local Shop Walls shelves etc 1_1: 570042481
+      Assets Local Shop Walls shelves etc 1_2: -419003789
+      Assets Local Shop Walls shelves etc 1_3: 738738294
+      Assets Local Shop Walls shelves etc 1_4: 1372715961
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,28 +1,34 @@
 fileFormatVersion: 2
-guid: 9f58907970e9e5848adc664c9654da98
+guid: 23674c36c112df342bc7a832d0b4b838
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8910280396782439670
-    second: Assets shop_0
+      213: -8327532751540040919
+    second: Assets shop-export_0
   - first:
-      213: 571012978508982618
-    second: Assets shop_1
+      213: -8150960490060806074
+    second: Assets shop-export_1
   - first:
-      213: 6988260339011047409
-    second: Assets shop_2
+      213: 2121158731180824017
+    second: Assets shop-export_2
   - first:
-      213: -3336243128762699929
-    second: Assets shop_3
+      213: -1562257261923635200
+    second: Assets shop-export_3
   - first:
-      213: 1253683588458313545
-    second: Assets shop_4
+      213: 8059824249725308658
+    second: Assets shop-export_4
   - first:
-      213: -6250442667561742689
-    second: Assets shop_5
+      213: 9133120692860166097
+    second: Assets shop-export_5
   - first:
-      213: -5947979998314670879
-    second: Assets shop_6
+      213: 7599046331176424061
+    second: Assets shop-export_6
+  - first:
+      213: -605895746124831889
+    second: Assets shop-export_7
+  - first:
+      213: 6772987308793993875
+    second: Assets shop-export_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -144,7 +150,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Assets shop_0
+      name: Assets shop-export_0
       rect:
         serializedVersion: 2
         x: 0
@@ -159,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fc085befcca7ab70800000000000000
-      internalID: 8910280396782439670
+      spriteID: 92b46096519ae6c80800000000000000
+      internalID: -8327532751540040919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets shop_1
+      name: Assets shop-export_1
       rect:
         serializedVersion: 2
         x: 37
@@ -181,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a596a225745ace700800000000000000
-      internalID: 571012978508982618
+      spriteID: 6488ea3be98f1ee80800000000000000
+      internalID: -8150960490060806074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets shop_2
+      name: Assets shop-export_2
       rect:
         serializedVersion: 2
         x: 67
@@ -203,14 +209,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ff44b0c0c94bf060800000000000000
-      internalID: 6988260339011047409
+      spriteID: 1d5504ca0aedf6d10800000000000000
+      internalID: 2121158731180824017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets shop_3
+      name: Assets shop-export_3
       rect:
         serializedVersion: 2
         x: 95
@@ -225,14 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76fe2c1fc8843b1d0800000000000000
-      internalID: -3336243128762699929
+      spriteID: 00074472c4fb15ae0800000000000000
+      internalID: -1562257261923635200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets shop_4
+      name: Assets shop-export_4
       rect:
         serializedVersion: 2
         x: 132
@@ -247,14 +253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9477bc6d49af56110800000000000000
-      internalID: 1253683588458313545
+      spriteID: 2fec4fcc37f3adf60800000000000000
+      internalID: 8059824249725308658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets shop_5
+      name: Assets shop-export_5
       rect:
         serializedVersion: 2
         x: 159
@@ -269,14 +275,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9e89079287f149a0800000000000000
-      internalID: -6250442667561742689
+      spriteID: 1df13bc71ec5fbe70800000000000000
+      internalID: 9133120692860166097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Assets shop_6
+      name: Assets shop-export_6
       rect:
         serializedVersion: 2
         x: 194
@@ -291,8 +297,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e4535d84b7847da0800000000000000
-      internalID: -5947979998314670879
+      spriteID: d729181706c357960800000000000000
+      internalID: 7599046331176424061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets shop-export_7
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 368
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f632f41770d6797f0800000000000000
+      internalID: -605895746124831889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets shop-export_8
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 367
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a15e0921c7efd50800000000000000
+      internalID: 6772987308793993875
       vertices: []
       indices: 
       edges: []
@@ -311,13 +361,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Assets shop_0: 8910280396782439670
-      Assets shop_1: 571012978508982618
-      Assets shop_2: 6988260339011047409
-      Assets shop_3: -3336243128762699929
-      Assets shop_4: 1253683588458313545
-      Assets shop_5: -6250442667561742689
-      Assets shop_6: -5947979998314670879
+      Assets shop-export_0: -8327532751540040919
+      Assets shop-export_1: -8150960490060806074
+      Assets shop-export_2: 2121158731180824017
+      Assets shop-export_3: -1562257261923635200
+      Assets shop-export_4: 8059824249725308658
+      Assets shop-export_5: 9133120692860166097
+      Assets shop-export_6: 7599046331176424061
+      Assets shop-export_7: -605895746124831889
+      Assets shop-export_8: 6772987308793993875
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
