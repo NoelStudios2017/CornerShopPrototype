@@ -11,7 +11,8 @@ public class GameManagement : MonoBehaviour
     [SerializeField] TextMeshProUGUI karmaText;
     [SerializeField] TextMeshProUGUI suppliesText;
 
-    public int day = 1;
+    public int day;
+
     public GameObject[] customers;
     public Transform shopEntrance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -70,6 +71,7 @@ public class GameManagement : MonoBehaviour
             if(day == 1)
             {
                 GameObject newCust = Instantiate(cust, shopEntrance);
+                
             }
         }
 
