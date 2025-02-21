@@ -71,9 +71,8 @@ public class GameManagement : MonoBehaviour
             {
                 GameObject newCust = Instantiate(cust, shopEntrance);
             }
-
-
         }
+
     }
     
     //some sort of function that UI can use for 
