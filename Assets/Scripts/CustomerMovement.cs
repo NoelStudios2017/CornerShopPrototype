@@ -10,17 +10,19 @@ public class CustomerMovement : MonoBehaviour
     private int randomSpot;
     private float waitTime;
     public float startWaitime;
-    public bool isServed = false;
-    public bool beenServed = false;
+    //
+    public bool inPositionToBeServed = false;
+    //public bool beenServed = false;
+    //A bool that stops customers from moving if they are being served.
     public bool isMoving = false;
 
     private void Start()
     {
-       randomSpot=Random.Range(0,moveSpots.Length);
-       waitTime = startWaitime;
-       moveSpots = GameObject.FindGameObjectsWithTag("Positions"); 
-       isMoving = true;
-       rb = GetComponent<Rigidbody2D>();
+        randomSpot = Random.Range(0, moveSpots.Length);
+        waitTime = startWaitime;
+        moveSpots = GameObject.FindGameObjectsWithTag("Positions");
+        isMoving = true;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -29,24 +31,24 @@ public class CustomerMovement : MonoBehaviour
         {
             return;
         }
-        
-            //rb.bodyType = RigidbodyType2D.Dynamic;
-            transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].transform.position, speed * Time.deltaTime);
 
-            if (Vector2.Distance(transform.position, moveSpots[randomSpot].transform.position) < 0.2f)
+        //rb.bodyType = RigidbodyType2D.Dynamic;
+        transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].transform.position, speed * Time.deltaTime);
+
+        if (Vector2.Distance(transform.position, moveSpots[randomSpot].transform.position) < 0.2f)
+        {
+            if (waitTime <= 0)
             {
-                if (waitTime <= 0)
-                {
-                    randomSpot = Random.Range(0, moveSpots.Length);
-                    waitTime = startWaitime;
-                }
-                else
-                {
-                    waitTime -= Time.deltaTime;
-                    //rb.bodyType = RigidbodyType2D.Kinematic;
-                }
+                randomSpot = Random.Range(0, moveSpots.Length);
+                waitTime = startWaitime;
             }
-        
+            else
+            {
+                waitTime -= Time.deltaTime;
+                //rb.bodyType = RigidbodyType2D.Kinematic;
+            }
+        }
+
 
     }
 

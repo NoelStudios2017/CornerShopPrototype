@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float rotationSpeed = 360f;
     private void Awake()
     {
-        _playerInputActions = new InputSystem_Actions(); 
+        _playerInputActions = new InputSystem_Actions();
         _characterController = GetComponent<CharacterController>();
     }
 
@@ -42,12 +42,12 @@ public class PlayerController : MonoBehaviour
 
         Quaternion rotation = Quaternion.LookRotation(multiplyMatrix, Vector3.up);
 
-        transform.rotation = Quaternion.RotateTowards(transform.rotation,rotation,rotationSpeed*Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
     }
 
     private void Move()
     {
-        Vector3 moveDirection= speed * _input.normalized*Time.deltaTime;
+        Vector3 moveDirection = speed * _input.normalized * Time.deltaTime;
         _characterController.Move(moveDirection);
     }
 
