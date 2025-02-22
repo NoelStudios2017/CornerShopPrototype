@@ -11,20 +11,26 @@ public class CustomerMovement : MonoBehaviour
     private float waitTime;
     public float startWaitime;
     public bool isServed = false;
+    public bool beenServed = false;
     public bool isMoving = false;
+
     private void Start()
     {
        randomSpot=Random.Range(0,moveSpots.Length);
        waitTime = startWaitime;
        moveSpots = GameObject.FindGameObjectsWithTag("Positions"); 
        isMoving = true;
-    rb = GetComponent<Rigidbody2D>();
+       rb = GetComponent<Rigidbody2D>();
     }
+
     private void Update()
     {
-        if(isMoving)
+        if (!isMoving)
         {
-            rb.bodyType = RigidbodyType2D.Dynamic;
+            return;
+        }
+        
+            //rb.bodyType = RigidbodyType2D.Dynamic;
             transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].transform.position, speed * Time.deltaTime);
 
             if (Vector2.Distance(transform.position, moveSpots[randomSpot].transform.position) < 0.2f)
@@ -37,9 +43,11 @@ public class CustomerMovement : MonoBehaviour
                 else
                 {
                     waitTime -= Time.deltaTime;
-                    rb.bodyType = RigidbodyType2D.Kinematic;
+                    //rb.bodyType = RigidbodyType2D.Kinematic;
                 }
             }
-        }
+        
+
     }
+
 }

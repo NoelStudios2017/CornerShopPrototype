@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -10,9 +12,12 @@ public class GameManagement : MonoBehaviour
     [SerializeField] TextMeshProUGUI moneyText;
     [SerializeField] TextMeshProUGUI karmaText;
     [SerializeField] TextMeshProUGUI suppliesText;
-
+    public GameObject dialogueServingCustomers;
+    GameObject newCust;
     public int day;
-
+    public bool isServingCustomer = false;
+    public bool customerSeved=false;
+    public List<GameObject> activeCustomers = new List<GameObject>();
     public GameObject[] customers;
     public Transform shopEntrance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,8 +30,26 @@ public class GameManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //if(customerSeved)
+        //{
+        //    StopAllCustomers();
+        //}
+
     }
+
+
+    //private void StopAllCustomers()
+    //{
+    //    foreach (GameObject cust in activeCustomers)
+    //    {
+    //        CustomerMovement customerMovement = cust.GetComponent<CustomerMovement>();
+    //        if (customerMovement != null)
+    //        {
+    //            customerMovement.isMoving = false;
+    //        }
+    //    }
+
+    //}
 
     //method to update the ui.
     public void UpdateUI()
@@ -66,16 +89,31 @@ public class GameManagement : MonoBehaviour
     }
     public void SpawnCustomers()
     {
-        foreach (GameObject cust in customers)
+        //clear the list of old stuff replace it with new.
+        activeCustomers.Clear();
+
+        for(int i=0;i<day+1;i++)
         {
-            if(day == 1)
-            {
-                GameObject newCust = Instantiate(cust, shopEntrance);
-                
-            }
+          newCust = Instantiate(customers[UnityEngine.Random.Range(0,customers.Length)], shopEntrance);
+          activeCustomers.Add(newCust);
         }
 
     }
-    
+
     //some sort of function that UI can use for 
+    public void CustomerServed()
+    {
+        foreach (GameObject cust in activeCustomers)
+        {
+            CustomerMovement customerMovement = cust.GetComponent<CustomerMovement>();
+            if (customerMovement != null && customerMovement.isServed)
+            {
+                cust.SetActive(false);
+                customerMovement.isServed = false;
+                isServingCustomer = false;
+                activeCustomers.Remove(cust);
+                break;
+            }
+        }
+    }
 }
