@@ -5,13 +5,16 @@ using UnityEngine;
 
 public class GameManagement : MonoBehaviour
 {
-    private int money;
-    private int karma;
-    private int supplies;
+    private float money=5;
+    private int karma=3;
+    private int supplies=3;
 
     [SerializeField] TextMeshProUGUI moneyText;
     [SerializeField] TextMeshProUGUI karmaText;
     [SerializeField] TextMeshProUGUI suppliesText;
+    [SerializeField] GameObject badEnding;
+    [SerializeField] GameObject goodEnding;
+    [SerializeField] GameObject middleEnding;
     public GameObject dialogueServingCustomers;
     GameObject newCust;
     public int day;
@@ -34,6 +37,10 @@ public class GameManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        WinGame();
+        LostByKarma();
+        MiddleEnding();
+        UpdateUI();
         //if(customerSeved)
         //{
         //    StopAllCustomers();
@@ -58,20 +65,29 @@ public class GameManagement : MonoBehaviour
     //method to update the ui.
     public void UpdateUI()
     {
-        moneyText.text = "Money: " + money.ToString();
+        moneyText.text = "Money:£ " + money.ToString();
         karmaText.text = "Karma: " + karma.ToString();
         suppliesText.text = "Supplies: " + supplies.ToString();
     }
 
     //Methods to remove from resources in dialogue and buttons responses.
-    public int DeductMoney(int newMoney)
+    public float DeductMoney(float newMoney)
     {
         return money -= newMoney;
+
+    }
+    public float AddMoney(float newMoney)
+    {
+        return money += newMoney;
 
     }
     public int DeductKarma(int newKarma)
     {
         return karma -= newKarma;
+    }
+    public int AddKarma(int newKarma)
+    {
+        return karma += newKarma;
     }
     public int DeductSupplies(int newSupplies)
     {
@@ -79,7 +95,7 @@ public class GameManagement : MonoBehaviour
     }
 
     //Methods to get the money, karma and supplies if needed anywhere in other scripts.
-    public int GetMoney()
+    public float GetMoney()
     {
         return money;
     }
@@ -114,6 +130,10 @@ public class GameManagement : MonoBehaviour
             {
                 //turn the customer off as he has been served.
                 cust.SetActive(false);
+                AddMoney(+0.2f);
+                DeductSupplies(1);
+                AddKarma(+1);
+                UpdateUI();
                 //clear the customer toggle for when respawning customers.
                 customerMovement.inPositionToBeServed = false;
                 //release the customer from the block
@@ -125,4 +145,49 @@ public class GameManagement : MonoBehaviour
             }
         }
     }
+    public void DontServeCustomer()
+    {
+        foreach (GameObject cust in activeCustomers)
+        {
+            CustomerMovement customerMovement = cust.GetComponent<CustomerMovement>();
+            if (customerMovement != null && customerMovement.inPositionToBeServed)
+            {
+                //turn the customer off as he has been served.
+                cust.SetActive(false);
+                DeductKarma(1);
+                UpdateUI();
+                //clear the customer toggle for when respawning customers.
+                customerMovement.inPositionToBeServed = false;
+                //release the customer from the block
+                isServingCustomer = false;
+                //remove them from list.
+                activeCustomers.Remove(cust);
+                //get out of the foreach loop. 
+                break;
+            }
+        }
+    }
+    public void WinGame()
+    {
+        if(karma>=6)
+        {
+            goodEnding.SetActive(true);
+        }
+    }
+    public void LostByKarma()
+    {
+        if(karma<=0)
+        {
+            badEnding.SetActive(true);
+        }
+
+    }
+    public void MiddleEnding()
+    {
+        if (money>=5.2 && karma >1)
+        {
+            middleEnding.SetActive(true);
+        }
+    }
+
 }
