@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Local shop first attempt image itchio_0: 320553636872774585
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
