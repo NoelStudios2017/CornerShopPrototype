@@ -39,7 +39,7 @@ public class GameManagement : MonoBehaviour
     {
         WinGame();
         LostByKarma();
-        MiddleEnding();
+        //MiddleEnding();
         UpdateUI();
         //if(customerSeved)
         //{
@@ -182,12 +182,12 @@ public class GameManagement : MonoBehaviour
         }
 
     }
-    public void MiddleEnding()
-    {
-        if (money>=5.2 && karma >1)
-        {
-            middleEnding.SetActive(true);
-        }
-    }
+    //public void MiddleEnding()
+    //{
+    //    if (money>=5.2 && karma >1)
+    //    {
+    //        middleEnding.SetActive(true);
+    //    }
+    //}
 
 }
